@@ -16,6 +16,7 @@ class Welcome extends Application
 	{
 		// this is the view we want shown
 		$this->data['pagebody'] = 'homepage';
+		//$this->show(2);
 
 		// build the list of authors, to pass on to our view
 		$source = $this->quotes->all();
@@ -24,6 +25,7 @@ class Welcome extends Application
 		$this->data['authors'] = $source;
 
 		$this->render();
+		
 	}
 
 }
