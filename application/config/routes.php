@@ -54,6 +54,7 @@ $route['bravo'] = "bravo/welcome/index";
 $route['echo'] = "echo/must/wehave";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 $route['foxtrot'] = 'tango';
 $route['i/.*'] = 'golf';
 $route['bananas/rule'] = function() {
@@ -61,4 +62,5 @@ $route['bananas/rule'] = function() {
 };
 $route['india'] = 'india';
 $route['juliet'] = 'juliet';
+$route['show/(:any)'] = 'welcome/show/$1';
 
