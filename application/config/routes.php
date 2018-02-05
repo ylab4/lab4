@@ -50,21 +50,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
+$route['bravo'] = "bravo/welcome/index";
+$route['echo'] = "echo/must/wehave";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 $route['foxtrot'] = 'tango';
 $route['i/.*'] = 'golf';
 $route['bananas/rule'] = function() {
     return 'golf';
 };
-$route['india'] = function() {
-    // The following should be a relative link to your image file above
-    $source = '../data/Lone Starr.jpg'; 
-    // note that we could have referenced an image anywhere on our system
-
-    // set the mime type for that image (jpeg, png, etc)
-    header("Content-type: image/jpg"); 
-    header('Content-Disposition: inline');
-    readfile($source); // dish it
-};
+$route['india'] = 'india';
+$route['juliet'] = 'juliet';
+$route['show/(:any)'] = 'welcome/show/$1';
 
